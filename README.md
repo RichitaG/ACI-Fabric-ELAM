@@ -268,8 +268,8 @@ BGL-JPMC-SPINE1#
 
 - Savinder Singh savsingh@cisco.com
 - Takuya Kishida tkishida@cisco.com
-- Devi S devs2@cisco.com
 - Narendra Yerra nyerra@cisco.com
+- Devi S devs2@cisco.com
 - Richita Gajjar rgajjar@cisco.com
 
 
