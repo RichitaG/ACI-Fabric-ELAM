@@ -25,8 +25,9 @@ Script Tested on:
 	APIC M3/L3
 Contributors:
     Savinder Singh savsingh@cisco.com
-    Devi S devs2@cisco.com
+    Takuya Kishida tkishida@cisco.com
     Narendra Yerra nyerra@cisco.com
+    Devi S devs2@cisco.com
     Richita Gajjar rgajjar@cisco.com
 '''
 
@@ -58,7 +59,7 @@ class Ssh():
     
     """This class connects to the leaf and get the command output
        usage:
-              ssh = Ssh("admin","ins3965!","10.3.200.64")
+              ssh = Ssh("<USERNAME>","<PASSWORD>","<DEVICE IP>")
               session = ssh.connect()
               out = ssh.send_command(session,"show module")
               
@@ -320,22 +321,6 @@ class ElamCommand(object):
         return cmds
 
 
-# def getModel(cmd):
-#     cmd = cmd.split("\n")
-#     model = []
-#     for line in cmd:
-#         regex = re.compile("(\d.+)(?P<model>N9K-\w+.[^\s]+)")
-#         match = regex.match(line)
-#         if match:
-#             model.append(match.group("model"))
-#     if len(model)>1:
-#         print("Modular Device not supported")
-#     else:
-#         try:
-#             print(model[-1])
-#             return model[-1]
-#         except Exception:
-#             return None
 
 def getModel(nodeName):
     fabricNode = json.loads(os.popen('''icurl 'http://localhost:7777/api/class/fabricNode.json?query-target-filter=eq(fabricNode.name,"{}")' 2>/dev/null'''.format(nodeName)).read())
@@ -343,10 +328,6 @@ def getModel(nodeName):
     role = fabricNode["imdata"][0]["fabricNode"]["attributes"]["role"]
     return (model,role)
 
-#uName = "admin"
-#password = "cisco!123"
-#lName="BGL-JPMC-LEAF1"
-#hostIp="10.0.224.64"
 
 asics = [
     {
