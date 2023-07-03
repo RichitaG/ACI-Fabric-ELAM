@@ -66,7 +66,8 @@ class Ssh():
               """
     
     prompt = ["[^#]#[ ]*$",pexpect.TIMEOUT]
-    #prompt="[^#]#[ ]*$"    
+    #prompt="[^#]#[ ]*$"
+    #prompt="[^#]#[ ]*$"	
 
     def __init__(self,username,password,host):
         
