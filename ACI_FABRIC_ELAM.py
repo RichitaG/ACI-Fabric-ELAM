@@ -3161,7 +3161,6 @@ class Multicast(Ereport):
 
 def main(uName,password,hostIp):
 
-    
     logging.info("Getting Node details")
     model,role = getModel(lName[4:])
     a=lName[:3]
