@@ -110,10 +110,10 @@ class Ssh():
                 sys.exit(0)
         session.sendline(self.password)
         sess=session.expect(Ssh.prompt,timeout=10)
-	if sess!=0:
-		print("Invalid credentials!!!")
-		sys.exit(0) 
-        return session
+		if sess!=0:
+			print("Invalid credentials!!!")
+			sys.exit(0) 
+		return session
 
         
 class ElamCommand(object):
