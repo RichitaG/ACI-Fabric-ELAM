@@ -327,10 +327,6 @@ def getModel(nodeName):
     role = fabricNode["imdata"][0]["fabricNode"]["attributes"]["role"]
     return (model,role)
 
-#uName = "admin"
-#password = "cisco!123"
-#lName="BGL-JPMC-LEAF1"
-#hostIp="10.0.224.64"
 
 asics = [
     {
