@@ -1,6 +1,10 @@
 # ACI-Fabric-ELAM
 ACI Fabric ELAM simplified and central from APIC
 
+**Imp:**
+This code needs to be run only from APIC controller, which comes with Python-2 only by default. 
+For same reason code is written in Python-2.
+
 **Introduction**
 
 ACI ELAM is a useful tool in identifying in packet is entering and exiting ACI Leaf or Spine as expected.
